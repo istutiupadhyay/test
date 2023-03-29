@@ -16,7 +16,8 @@ const Signup = () => {
         password,
       });
       if (res.data.status === "success") {
-        alert("Account created successfully. Please check your email to activate your account.");
+        alert("Account created successfully. Please check your email .");
+        window.location.href = "./login_component.js"
         sendConfirmationEmail(res.data.email)
       }
     } catch (err) {
